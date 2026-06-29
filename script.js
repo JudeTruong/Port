@@ -48,14 +48,14 @@ Cal("init", "15min", {
 Cal.config = Cal.config || {};
 Cal.config.forwardQueryParams = true;
 
-  Cal.ns["15min"]("inline", {
-    elementOrSelector: "#my-cal-inline-15min",
-    config: {
-      layout: "month_view",
-      useSlotsViewOnSmallScreen: "true"
-    },
-    calLink: "port-consulting-jlzey5/15min",
-  });
+Cal.ns["15min"]("inline", {
+  elementOrSelector: "#my-cal-inline-15min",
+  config: {
+    layout: "month_view",
+    useSlotsViewOnSmallScreen: true,
+  },
+  calLink: "port-consulting/15min",
+});
 
 Cal.ns["15min"]("ui", {
   hideEventTypeDetails: false,
