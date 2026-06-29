@@ -14,17 +14,28 @@ body{
     color:#111;
 }
 
-.grid-bg{
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    background-image:
-    linear-gradient(#f1f1f1 1px, transparent 1px),
-    linear-gradient(90deg,#f1f1f1 1px,transparent 1px);
-
-    background-size:40px 40px;
+.network-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
+.network-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.network-bg line {
+    stroke: #2563eb;
+    stroke-width: 1;
+    opacity: .08;
+}
+
+.network-bg circle {
+    fill: #2563eb;
+    opacity: .12;
+}
 header{
     display:flex;
     justify-content:space-between;
@@ -58,7 +69,7 @@ nav a:hover{
 
 .hero{
     max-width:1000px;
-    padding:120px 8%;
+    padding: 8rem 8% 6rem;
 }
 
 .eyebrow{
@@ -76,7 +87,7 @@ nav a:hover{
 
 .subtitle{
     max-width:650px;
-    margin-top:24px;
+    margin-bottom: 1.25rem;
     color:#666;
     font-size:1.1rem;
 }
@@ -103,19 +114,19 @@ nav a:hover{
 }
 
 .section{
-    padding:100px 8%;
+    padding: 6rem 8%;
 }
 
 .section-label{
     color:#888;
     font-size:.8rem;
     text-transform:uppercase;
-    margin-bottom:16px;
+    margin-bottom: 0.75rem;
 }
 
 .section h2{
     font-size:2.5rem;
-    margin-bottom:40px;
+    margin-bottom: 1.5rem;
 }
 
 .cards{
