@@ -1,11 +1,13 @@
-  (function (C, A, L) {
-    let p = function (a, ar) {
-      a.q.push(ar);
-    };
+(function (C, A, L) {
+  let p = function (a, ar) {
+    a.q.push(ar);
+  };
 
-    let d = C.document;
+  let d = C.document;
 
-    C.Cal = C.Cal || function () {
+  C.Cal =
+    C.Cal ||
+    function () {
       let cal = C.Cal;
       let ar = arguments;
 
@@ -37,25 +39,25 @@
 
       p(cal, ar);
     };
-  })(window, "https://app.cal.com/embed/embed.js", "init");
+})(window, "https://app.cal.com/embed/embed.js", "init");
 
-  Cal("init", "15min", {
-    origin: "https://app.cal.com"
-  });
+Cal("init", "15min", {
+  origin: "https://app.cal.com",
+});
 
-  Cal.config = Cal.config || {};
-  Cal.config.forwardQueryParams = true;
+Cal.config = Cal.config || {};
+Cal.config.forwardQueryParams = true;
 
-  Cal.ns["15min"]("inline", {
-    elementOrSelector: "#my-cal-inline-15min",
-    config: {
-      layout: "month_view",
-      useSlotsViewOnSmallScreen: "true"
-    },
-    calLink: "port-consulting-jlzey5/15min",
-  });
+Cal.ns["15min"]("inline", {
+  elementOrSelector: "#my-cal-inline-15min",
+  config: {
+    layout: "month_view",
+    useSlotsViewOnSmallScreen: true,
+  },
+  calLink: "port-consulting/15min",
+});
 
-  Cal.ns["15min"]("ui", {
-    hideEventTypeDetails: false,
-    layout: "month_view"
-  });
+Cal.ns["15min"]("ui", {
+  hideEventTypeDetails: false,
+  layout: "month_view",
+});
