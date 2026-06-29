@@ -131,11 +131,6 @@ nav a:hover{
     transition:.2s;
 }
 
-.card:hover{
-    transform:translateY(-4px);
-    border-color:#111;
-}
-
 .card p{
     color:#666;
     margin-top:10px;
