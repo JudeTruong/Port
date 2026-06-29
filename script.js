@@ -52,7 +52,7 @@
       layout: "month_view",
       useSlotsViewOnSmallScreen: "true"
     },
-    calLink: "port-consulting-jlzey5/15min",
+    calLink: "port-consulting/15min",
   });
 
   Cal.ns["15min"]("ui", {
