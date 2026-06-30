@@ -61,3 +61,28 @@ Cal.ns["15min"]("ui", {
   hideEventTypeDetails: false,
   layout: "month_view",
 });
+
+const revealElements = document.querySelectorAll(
+  ".hero, .section, .card, .timeline"
+);
+
+revealElements.forEach((element) => {
+  element.classList.add("reveal");
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  },
+  {
+    threshold: 0.15,
+  }
+);
+
+revealElements.forEach((element) => {
+  observer.observe(element);
+});
